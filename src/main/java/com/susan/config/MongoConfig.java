@@ -1,4 +1,4 @@
-package com.test.config;
+package com.susan.config;
 import java.util.Collection;
 import java.util.Collections;
 import org.springframework.context.annotation.Configuration;
