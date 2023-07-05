@@ -1,21 +1,20 @@
-package com.susan.domain.entity;
+package com.susan.domain.request;
 
-public class entity {
-// db 테이블 자체 다 가져옴
+public class SignupRequest {
+
+    // 회원가입 시 받아올 정보
     private String id;
     private String password;
     private String name;
     private String address;
     private String phone;
-    private int type;
 
-    public entity(String id, String password, String name, String address, String phone, int type) {
+    public SignupRequest(String id, String password, String name, String address, String phone) {
         this.id = id;
         this.password = password;
         this.name = name;
         this.address = address;
         this.phone = phone;
-        this.type = type;
     }
 
     public String getId() {
@@ -56,13 +55,5 @@ public class entity {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public int getType() {
-        return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
     }
 }
