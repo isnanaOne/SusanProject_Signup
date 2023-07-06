@@ -1,27 +1,29 @@
-package com.susan.domain.request;
+package com.susan.domain.dto;
 
-public class SignupRequest {
+public class singupDto {
+    //id, pw, name, address, phone, type
+    // 실제 db값
 
-    // 회원가입 시 받아올 정보
-    // jsp 변수와 같아야 한다.
+    //생성자, 기본생성자, getter, setter
+
     private String id;
     private String password;
     private String name;
     private String address;
     private String phone;
+    private int idType;
 
-    private Integer idType;
-
-//    private int mode; // 회원가입 모드(1: 관리자, 2: 일반 유저)
-
-
-    public SignupRequest(String id, String password, String name, String address, String phone, Integer idType) {
+    public singupDto(String id, String password, String name, String address, String phone, int idType) {
         this.id = id;
         this.password = password;
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.idType = idType;
+    }
+
+    public singupDto() {
+
     }
 
     public String getId() {
@@ -64,11 +66,11 @@ public class SignupRequest {
         this.phone = phone;
     }
 
-    public Integer getIdType() {
+    public int getIdType() {
         return idType;
     }
 
-    public void setIdType(Integer idType) {
+    public void setIdType(int idType) {
         this.idType = idType;
     }
 }
